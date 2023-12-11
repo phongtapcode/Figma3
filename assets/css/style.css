@@ -72,7 +72,7 @@ nav li.active a::after {
 
 /* Main content */
 .main-content {
-  width: 854px;
+  width: 840px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -80,26 +80,24 @@ nav li.active a::after {
   align-items: center;
   justify-content: center;
 }
-
-.main-content__img {
+.main-content .main-content__img {
   margin: auto;
 }
-
-.main-content__title {
+.main-content .main-content__title {
+  width: 800px;
   color: #000;
   text-align: center;
-  font-size: 5.4rem;
-  font-weight: 700;
+  font-size: 4.7rem;
+  font-weight: 650;
   margin: auto;
   padding-top: 56px;
 }
-
-.main-content__desc {
+.main-content .main-content__desc {
   color: #000;
+  width: 500px;
   text-align: center;
   font-size: 2rem;
   font-weight: 400;
-  width: 592px;
   padding-bottom: 20px;
 }
 
@@ -121,7 +119,7 @@ nav li.active a::after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 90px 28px;
+  gap: 1px 28px;
 }
 .articles .articles__layout-item {
   display: flex;
@@ -141,14 +139,16 @@ footer {
   background: #000;
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 footer .footer__list {
   display: flex;
   justify-content: space-between;
+  margin-top: 18px;
 }
 footer .footer__list a {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -161,11 +161,12 @@ footer .footer__mini-logo {
   align-self: center;
 }
 footer .footer__desc {
+  margin-top: 20px;
   color: #fff;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 400;
-  width: 488px;
+  width: 540px;
   align-self: center;
 }
 footer .footer__links {
@@ -176,8 +177,8 @@ footer .footer__links {
 }
 footer .footer__links a {
   color: #fff;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 400;
   text-decoration-line: underline;
 }
 footer .copyright {
@@ -197,4 +198,101 @@ footer .copyright p {
 footer .copyright p:last-child {
   margin-top: -10px;
   padding-bottom: 32px;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  /* Header */
+  header .header__content .logo img {
+    flex-shrink: 0;
+  }
+  header .header__content nav ul {
+    display: none;
+  }
+  header .header__content .responsive-nav {
+    display: block;
+  }
+  header .header__content .responsive-nav img {
+    width: 50px;
+  }
+  /* Main content */
+  .main-content {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .main-content .main-content__title {
+    font-size: 6.2rem;
+    padding-bottom: 24px;
+  }
+  .main-content .main-content__img {
+    padding-top: 52px;
+    width: 100%;
+  }
+  .main-content .main-content__img img {
+    min-width: 100%;
+    width: 100%;
+  }
+  .main-content .main-content__desc {
+    font-size: 5rem;
+    padding-bottom: 52px;
+  }
+  /* Articles */
+  .articles {
+    padding-top: 30px;
+    width: 100%;
+    border-top: 10px solid #000;
+  }
+  .articles .articles__title {
+    font-size: 6.5rem;
+    padding-top: 56px;
+    padding-bottom: 20px;
+  }
+  .articles .articles__layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .articles .articles__layout-item {
+    width: 100%;
+  }
+  .articles .articles__layout-item img {
+    width: 80%;
+  }
+  .articles .articles__layout-item .desc {
+    font-size: 5rem;
+    min-width: 80%;
+  }
+  /* Footer */
+  footer {
+    width: 100%;
+    margin-top: 82px;
+  }
+  footer .footer__list a {
+    font-size: 2.8rem;
+  }
+  footer .footer__list a:nth-child(n+4) {
+    display: none;
+  }
+  footer .footer__mini-logo img {
+    width: 436.368px;
+  }
+  footer .footer__desc {
+    font-size: 2rem;
+    padding-top: 25px;
+  }
+  footer .footer__links a {
+    font-size: 2rem;
+  }
+  footer .footer__links .copyright p {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
